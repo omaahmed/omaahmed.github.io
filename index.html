@@ -1,50 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omar Ahmed</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #fcfbfa; /* Premium minimalist off-white */
-            color: #1a1a1a; /* Crisp dark slate text */
-            text-align: center;
-        }
-        .container {
-            max-width: 650px;
-            padding: 40px;
-            border: 1px solid #e5e5e5;
-            border-radius: 12px;
-            background-color: #ffffff; /* Crisp white card */
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-        }
-        h1 {
-            font-size: 2.8rem;
-            margin-bottom: 15px;
-            font-weight: 800;
-            color: #111111;
-        }
-        p {
-            font-size: 1.2rem;
-            color: #555555;
-            line-height: 1.6;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omar Ahmed</title>
+  <meta name="description" content="Omar Ahmed — Mechatronics Engineering student at SFU. Embedded firmware, ROS2, C++, robotics and hardware-software integration.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to my Website!🛠️</h1>
-        <p>My corner of the internet is officially live and currently under construction. Stay tuned :) </p>
-        <div class="links" style="margin-top: 30px; display: flex; gap: 20px; justify-content: center;">
-            <a href="https://github.com/omaahmed" target="_blank" style="color: #0066cc; text-decoration: none; font-weight: 600;">GitHub</a>
-            <a href="#" target="_blank" style="color: #0066cc; text-decoration: none; font-weight: 600;">LinkedIn</a>
+
+  <div class="page">
+
+    <!-- ===== IDENTITY PANEL (left third) ===== -->
+    <aside class="identity">
+      <div class="identity__inner">
+        <div class="identity__photo">
+          <span class="identity__initials">OA</span>
         </div>
-    </div>
+        <h1 class="identity__name">Omar Ahmed</h1>
+        <p class="identity__role">Mechatronics Engineering</p>
+
+        <nav class="identity__nav" aria-label="Section navigation">
+          <button class="nav-item is-active" data-target="about">about</button>
+          <button class="nav-item" data-target="projects">projects</button>
+          <button class="nav-item" data-target="books">books</button>
+          <button class="nav-item" data-target="writings">writings</button>
+          <button class="nav-item" data-target="contact">contact</button>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- ===== CONTENT PANEL (right two-thirds) ===== -->
+    <main class="content">
+
+      <!-- ABOUT -->
+      <section class="panel is-active" id="about">
+        <h2 class="panel__title">About</h2>
+        <p class="panel__lede">
+          I'm a Mechatronics Engineering student at Simon Fraser University, working at the
+          intersection of embedded firmware, robotics, and hardware that has to survive contact
+          with the real world.
+        </p>
+        <div class="prose">
+          <p>
+            My path here started under the hood of cars, not in a classroom. Rebuilding engines,
+            diagnosing hybrid battery packs, and machining custom ignition coils taught me how
+            mechanical systems actually fail and why they work when they do. That hands‑on instinct
+            followed me into formal engineering: at Team Phantom, SFU's Formula SAE Electric team, I
+            led the electric subsystem as Electric Team Lead, redesigning power‑delivery architecture
+            and writing the control logic that decided when the car got its boost.
+          </p>
+          <p>
+            These days my focus has shifted toward software that runs closer to the metal — ROS2
+            nodes, C++, control loops, computer vision — but the underlying question hasn't changed:
+            how does this system behave under real conditions, and what's the cleanest way to make it
+            reliable. I like engineering best when it's a little bit like poetry: every design choice
+            is a line, and the discipline is in making each one earn its place.
+          </p>
+        </div>
+
+        <div class="skills">
+          <span class="skill-tag">C++</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">ROS2</span>
+          <span class="skill-tag">OpenCV</span>
+          <span class="skill-tag">CUDA</span>
+          <span class="skill-tag">SolidWorks</span>
+          <span class="skill-tag">Embedded Systems</span>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="panel" id="projects">
+        <h2 class="panel__title">Projects</h2>
+        <p class="panel__lede">Five builds that taught me the most, in roughly chronological order.</p>
+
+        <div class="project-list">
+
+          <article class="project">
+            <div class="project__mark" style="--mark-color: var(--blue);"></div>
+            <div class="project__body">
+              <h3 class="project__title">HiWonder ROS2 Robot</h3>
+              <p class="project__meta">ROS2 · OpenCV · RViz · rqt</p>
+              <p>
+                Built the full software stack for a HiWonder robot: ROS2 nodes for servo control and
+                sensor processing, a transmitter/receiver integration for remote operation, and an
+                OpenCV pipeline for autonomous tape‑following. The hardest part was coordinating the
+                arm, gripper, and camera closely enough to reliably pick up chess pieces — which made
+                clean node architecture a necessity, not a nice‑to‑have.
+              </p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project__mark" style="--mark-color: var(--red);"></div>
+            <div class="project__body">
+              <h3 class="project__title">Rebuilding a Prius Hybrid Battery</h3>
+              <p class="project__meta">High-voltage safety · battery diagnostics</p>
+              <p>
+                Pulled a failed hybrid pack from a parts‑only Gen 1 Prius, diagnosed all 38 NiMH
+                modules individually, replaced the weak cells with salvaged good ones, and rebalanced
+                the pack. After reassembly and torque‑spec'd insulation work, the car cleared its
+                warning lights and returned to normal hybrid operation.
+              </p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project__mark" style="--mark-color: var(--amber);"></div>
+            <div class="project__body">
+              <h3 class="project__title">Custom Ignition Coils</h3>
+              <p class="project__meta">SolidWorks · CNC · ECU tuning</p>
+              <p>
+                Designed upgraded ignition coils for a VW Golf 2.5L inline‑five, working out winding
+                ratios and core materials by hand, then partnering with a machine shop to manufacture
+                the housings to spec. Final assembly, insulation, and ECU ignition‑timing adjustments
+                were mine — which pushed me deeper into automotive embedded systems.
+              </p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project__mark" style="--mark-color: var(--blue);"></div>
+            <div class="project__body">
+              <h3 class="project__title">Arduino PID Temperature Controller</h3>
+              <p class="project__meta">Closed-loop control · PID tuning</p>
+              <p>
+                Wired a thermistor, potentiometer, and LCD to an Arduino, then wrote the control code
+                to read the sensor, run a PID loop, and drive a heater over PWM. Most of the real work
+                was tuning P, I, and D by hand while watching live feedback until the system stopped
+                overshooting and held its setpoint.
+              </p>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project__mark" style="--mark-color: var(--red);"></div>
+            <div class="project__body">
+              <h3 class="project__title">Go-Kart Build</h3>
+              <p class="project__meta">Mechanical design · engine rebuild</p>
+              <p>
+                Built a go‑kart from scratch with no formal training — just everything I'd picked up
+                fixing cars. Rebuilt a Honda GX160 engine, sorted out suspension geometry and steering
+                alignment, and assembled the drivetrain. This was the project that made me realize I
+                wanted to do this for a living.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- BOOKS -->
+      <section class="panel" id="books">
+        <h2 class="panel__title">Books</h2>
+        <p class="panel__lede">A running list of books that have shaped how I think. Filling this in soon.</p>
+
+        <div class="book-list">
+          <article class="book book--placeholder">
+            <div class="book__cover" aria-hidden="true"></div>
+            <div class="book__body">
+              <h3 class="book__title">Book title goes here</h3>
+              <p class="book__author">Author name</p>
+              <p class="book__note">A few sentences on why this one stuck with me — coming soon.</p>
+            </div>
+          </article>
+
+          <article class="book book--placeholder">
+            <div class="book__cover" aria-hidden="true"></div>
+            <div class="book__body">
+              <h3 class="book__title">Book title goes here</h3>
+              <p class="book__author">Author name</p>
+              <p class="book__note">A few sentences on why this one stuck with me — coming soon.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- WRITINGS -->
+      <section class="panel" id="writings">
+        <h2 class="panel__title">Writings</h2>
+        <p class="panel__lede">Notes and longer-form posts. Nothing published yet — first one's coming soon.</p>
+
+        <div class="empty-state">
+          <p>This section is empty for now. Check back soon, or reach out if you'd like to know what's in the works.</p>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="panel" id="contact">
+        <h2 class="panel__title">Contact</h2>
+        <p class="panel__lede">The fastest way to reach me is email. I'm also around on the usual platforms.</p>
+
+        <ul class="contact-list">
+          <li><span class="contact-label">Email</span><a href="mailto:your.email@example.com">your.email@example.com</a></li>
+          <li><span class="contact-label">GitHub</span><a href="https://github.com/omaahmed" target="_blank" rel="noopener">github.com/omaahmed</a></li>
+          <li><span class="contact-label">LinkedIn</span><a href="https://www.linkedin.com/in/oahmed06/" target="_blank" rel="noopener">linkedin.com/in/oahmed06</a></li>
+          <li><span class="contact-label">Location</span><span>Vancouver, BC</span></li>
+        </ul>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
